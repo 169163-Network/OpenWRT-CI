@@ -95,7 +95,9 @@ jobs:
           echo "WRT_WIFI=wifi-yes" >> $GITHUB_ENV
           echo "WRT_KVER=none" >> $GITHUB_ENV
           echo "WRT_LIST=none" >> $GITHUB_ENV
-
+          export WRT_ARCH=$(awk -F'_DEVICE_' '/_DEVICE_/{print $2; exit}' "$GITHUB_WORKSPACE/Config/$WRT_CONFIG.txt")
+          echo "WRT_ARCH=$WRT_ARCH" >> $GITHUB_ENV
+          
       - name: Clone Code
         run: |
           git clone --depth=1 --single-branch --branch $WRT_BRANCH $WRT_REPO ./wrt/
