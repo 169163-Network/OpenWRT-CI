@@ -49,6 +49,7 @@ UPDATE_PACKAGE() {
 # UPDATE_PACKAGE "包名" "项目地址" "项目分支" "pkg/name，可选，pkg为从大杂烩中单独提取包名插件；name为重命名为包名"
 UPDATE_PACKAGE "theme-fluent" "LazuliKao/luci-theme-fluent" "main"
 UPDATE_PACKAGE "luci-app-adguardhome" "kenzok8/openwrt-packages" "master" "luci-app-adguardhome" "luci-app-adguardhome"
+UPDATE_PACKAGE "luci-app-advanced" "kenzok8/openwrt-packages" "master" "luci-app-advanced" "luci-app-advanced"
 UPDATE_PACKAGE "daede" "kenzok8/openwrt-daede" "main" "" "daed dae luci-app-daede"
 
 #更新软件包版本
